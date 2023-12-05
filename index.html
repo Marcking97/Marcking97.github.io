@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es-Mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La leyenda de los enamorados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="title">
+            <h1>La leyenda de los enamorados</h1>
+            <p>por Marco Antonio Guillen Cruz</p>
+        </div>
+        <div class="container">
+            <div class="story">
+                <p id="story-text"></p>
+            </div>
+            <div class="questions" id="questions">
+                <form id="answers-form">
+                    <!-- Pregunta 1 -->
+                    <label for="q1">¿Quién mostró mayor determinación para superar los obstáculos?</label><br>
+                    <input type="radio" id="determinacion_doncella" name="q1" value="La doncella">
+                    <label for="determinacion_doncella">La doncella</label><br>
+                    <input type="radio" id="determinacion_joven" name="q1" value="El joven">
+                    <label for="determinacion_joven">El joven</label><br>
+                    <input type="radio" id="determinacion_viejo" name="q1" value="El viejo">
+                    <label for="determinacion_viejo">El viejo</label><br>
+                    <input type="radio" id="determinacion_ninguno" name="q1" value="Ninguno mostró determinación">
+                    <label for="determinacion_ninguno">Ninguno mostró determinación</label><br><br>
+                
+                    <!-- Pregunta 2 -->
+                    <label for="q2">¿Quién tomó la decisión más impactante en la historia?</label><br>
+                    <input type="radio" id="decision_doncella" name="q2" value="La doncella al enfrentarse al viejo">
+                    <label for="decision_doncella">La doncella al enfrentarse al viejo</label><br>
+                    <input type="radio" id="decision_joven" name="q2" value="El joven al rechazar a la doncella">
+                    <label for="decision_joven">El joven al rechazar a la doncella</label><br>
+                    <input type="radio" id="decision_viejo" name="q2" value="El viejo al cruzar a la doncella">
+                    <label for="decision_viejo">El viejo al cruzar a la doncella</label><br>
+                    <input type="radio" id="decision_ninguno" name="q2" value="Ninguno tomó una decisión impactante">
+                    <label for="decision_ninguno">Ninguno tomó una decisión impactante</label><br><br>
+                
+                    <!-- Pregunta 3 -->
+                    <label for="q3">¿Quién asumió la mayor responsabilidad por el desenlace de la historia?</label><br>
+                    <input type="radio" id="responsabilidad_doncella" name="q3" value="La doncella">
+                    <label for="responsabilidad_doncella">La doncella</label><br>
+                    <input type="radio" id="responsabilidad_joven" name="q3" value="El joven">
+                    <label for="responsabilidad_joven">El joven</label><br>
+                    <input type="radio" id="responsabilidad_viejo" name="q3" value="El viejo">
+                    <label for="responsabilidad_viejo">El viejo</label><br>
+                    <input type="radio" id="responsabilidad_varios" name="q3" value="Varios personajes compartieron responsabilidad">
+                    <label for="responsabilidad_varios">Varios personajes compartieron responsabilidad</label><br><br>
+                
+                    <button type="submit">Enviar respuestas</button>
+                </form>
+            </div>
+
+            <div class="conclusion" id="conclusion">
+            </div>
+
+            <div class="controls">
+                <button id="prev-btn">Anterior</button>
+                <button id="next-btn">Siguiente</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
