@@ -18,46 +18,240 @@
             <div class="story">
                 <p id="story-text"></p>
             </div>
-            <div class="questions" id="questions">
-                <form id="answers-form">
-                    <!-- Pregunta 1 -->
-                    <label for="q1">¿Quién mostró mayor determinación para superar los obstáculos?</label><br>
-                    <input type="radio" id="determinacion_doncella" name="q1" value="La doncella">
-                    <label for="determinacion_doncella">La doncella</label><br>
-                    <input type="radio" id="determinacion_joven" name="q1" value="El joven">
-                    <label for="determinacion_joven">El joven</label><br>
-                    <input type="radio" id="determinacion_viejo" name="q1" value="El viejo">
-                    <label for="determinacion_viejo">El viejo</label><br>
-                    <input type="radio" id="determinacion_ninguno" name="q1" value="Ninguno mostró determinación">
-                    <label for="determinacion_ninguno">Ninguno mostró determinación</label><br><br>
-                
-                    <!-- Pregunta 2 -->
-                    <label for="q2">¿Quién tomó la decisión más impactante en la historia?</label><br>
-                    <input type="radio" id="decision_doncella" name="q2" value="La doncella al enfrentarse al viejo">
-                    <label for="decision_doncella">La doncella al enfrentarse al viejo</label><br>
-                    <input type="radio" id="decision_joven" name="q2" value="El joven al rechazar a la doncella">
-                    <label for="decision_joven">El joven al rechazar a la doncella</label><br>
-                    <input type="radio" id="decision_viejo" name="q2" value="El viejo al cruzar a la doncella">
-                    <label for="decision_viejo">El viejo al cruzar a la doncella</label><br>
-                    <input type="radio" id="decision_ninguno" name="q2" value="Ninguno tomó una decisión impactante">
-                    <label for="decision_ninguno">Ninguno tomó una decisión impactante</label><br><br>
-                
-                    <!-- Pregunta 3 -->
-                    <label for="q3">¿Quién asumió la mayor responsabilidad por el desenlace de la historia?</label><br>
-                    <input type="radio" id="responsabilidad_doncella" name="q3" value="La doncella">
-                    <label for="responsabilidad_doncella">La doncella</label><br>
-                    <input type="radio" id="responsabilidad_joven" name="q3" value="El joven">
-                    <label for="responsabilidad_joven">El joven</label><br>
-                    <input type="radio" id="responsabilidad_viejo" name="q3" value="El viejo">
-                    <label for="responsabilidad_viejo">El viejo</label><br>
-                    <input type="radio" id="responsabilidad_varios" name="q3" value="Varios personajes compartieron responsabilidad">
-                    <label for="responsabilidad_varios">Varios personajes compartieron responsabilidad</label><br><br>
-                
-                    <button type="submit">Enviar respuestas</button>
+            <div id="question-block" style="display: none;">
+                <form id="questions">
+                    <!-- Preguntas 1-4 -->
+                    <div id="questions-1-4">
+                        <!-- Pregunta 1 -->
+                        <label for="q1" class="q">¿Cuál fue la razón principal por la que la doncella se acercó al
+                            viejo?</label><br>
+                        <input type="radio" id="p1_option_a" name="q1" value="a">
+                        <label for="p1_option_a">a) Para pagarle por llevarla al otro lado del río.</label><br>
+                        <input type="radio" id="p1_option_b" name="q1" value="b">
+                        <label for="p1_option_b">b) Porque el viejo era solitario y anhelaba compañía.</label><br>
+                        <input type="radio" id="p1_option_c" name="q1" value="c">
+                        <label for="p1_option_c">c) Para pedirle consejo sobre cómo llegar al otro lado del
+                            río.</label><br>
+                        <br>
+                        <!-- Pregunta 2 -->
+                        <label for="q2" class="q">¿Por qué el joven repudió a la doncella al enterarse de lo sucedido?</label><br>
+                        <input type="radio" id="p2_option_a" name="q2" value="a">
+                        <label for="p2_option_a">a) Porque creyó que ella no lo amaba realmente.</label><br>
+                        <input type="radio" id="p2_option_b" name="q2" value="b">
+                        <label for="p2_option_b">b) Porque se sintió traicionado al saber lo que ocurrió con el
+                            viejo.</label><br>
+                        <input type="radio" id="p2_option_c" name="q2" value="c">
+                        <label for="p2_option_c">c) Porque pensó que ella era imprudente al arriesgarse a cruzar
+                            nadando.</label><br>
+                            <br>
+                        <!-- Pregunta 3 -->
+                        <label for="q3" class="q">¿Qué llevó a la doncella a finalmente aceptar la propuesta del
+                            viejo?</label><br>
+                        <input type="radio" id="p3_option_a" name="q3" value="a">
+                        <label for="p3_option_a">a) La necesidad de ver a su amado.</label><br>
+                        <input type="radio" id="p3_option_b" name="q3" value="b">
+                        <label for="p3_option_b">b) El convencimiento de que el viejo la ayudaría sin costo.</label><br>
+                        <input type="radio" id="p3_option_c" name="q3" value="c">
+                        <label for="p3_option_c">c) La presión de su abuela para aceptar el trato del viejo.</label><br>
+                        <br>
+                        <!-- Pregunta 4 -->
+                        <label for="q4" class="q">¿Qué alternativa tenía el joven para cruzar al otro lado del río y reunirse con
+                            la doncella?</label><br>
+                        <input type="radio" id="p4_option_a" name="q4" value="a">
+                        <label for="p4_option_a">a) Buscar un bote como lo hizo la doncella.</label><br>
+                        <input type="radio" id="p4_option_b" name="q4" value="b">
+                        <label for="p4_option_b">b) Construir un puente nuevo.</label><br>
+                        <input type="radio" id="p4_option_c" name="q4" value="c">
+                        <label for="p4_option_c">c) Nadar hasta el otro lado.</label><br>
+                        <br>
+                        <!-- Botón para mostrar las preguntas 5-8 -->
+                        <button id="next-questions-btn-1-4">Siguiente</button>
+                    </div>
+
+                    <!-- Preguntas 5-8 -->
+                    <div id="questions-5-8" style="display: none;">
+                        <!-- Pregunta 5 -->
+                        <label for="q5" class="q">¿Por qué la doncella se sintió culpable al reencontrarse con su
+                            amado?</label><br>
+                        <input type="radio" id="p5_option_a" name="q5" value="a">
+                        <label for="p5_option_a">a) Por haber dudado del amor del joven.</label><br>
+                        <input type="radio" id="p5_option_b" name="q5" value="b">
+                        <label for="p5_option_b">b) Por no haber buscado al joven antes.</label><br>
+                        <input type="radio" id="p5_option_c" name="q5" value="c">
+                        <label for="p5_option_c">c) Por no revelarle la verdad sobre el trato con el viejo.</label><br>
+                        <br>
+                        <!-- Pregunta 6 -->
+                        <label for="q6" class="q">¿Cómo describirías la relación entre la doncella y el viejo?</label><br>
+                        <input type="radio" id="p6_option_a" name="q6" value="a">
+                        <label for="p6_option_a">a) Transaccional.</label><br>
+                        <input type="radio" id="p6_option_b" name="q6" value="b">
+                        <label for="p6_option_b">b) Compasiva.</label><br>
+                        <input type="radio" id="p6_option_c" name="q6" value="c">
+                        <label for="p6_option_c">c) Coaccionada.</label><br>
+                        <br>
+                        <!-- Pregunta 7 -->
+                        <label for="q7" class="q">¿Qué piensas que era más importante para la doncella en su relación con el
+                            joven?</label><br>
+                        <input type="radio" id="p7_option_a" name="q7" value="a">
+                        <label for="p7_option_a">a) La conexión emocional.</label><br>
+                        <input type="radio" id="p7_option_b" name="q7" value="b">
+                        <label for="p7_option_b">b) La lealtad y la confianza.</label><br>
+                        <input type="radio" id="p7_option_c" name="q7" value="c">
+                        <label for="p7_option_c">c) El sacrificio por el amor.</label><br>
+                        <br>
+                        <!-- Pregunta 8 -->
+                        <label for="q8" class="q">¿Cuál crees que fue la motivación principal del joven en su reacción hacia la
+                            doncella?</label><br>
+                        <input type="radio" id="p8_option_a" name="q8" value="a">
+                        <label for="p8_option_a">a) Protección y seguridad.</label><br>
+                        <input type="radio" id="p8_option_b" name="q8" value="b">
+                        <label for="p8_option_b">b) Orgullo y dignidad.</label><br>
+                        <input type="radio" id="p8_option_c" name="q8" value="c">
+                        <label for="p8_option_c">c) Comprensión y empatía.</label><br>
+                        <br>
+                        <!-- Botón para mostrar las preguntas 9-12 -->
+                        <button id="next-questions-btn-5-8">Siguiente</button>
+                    </div>
+
+                    <!-- Preguntas 9-12 -->
+                    <div id="questions-9-12" style="display: none;">
+                        <!-- Pregunta 9 -->
+                        <label for="q9" class="q">¿Qué crees que influyó más en la decisión final de la doncella?</label><br>
+                        <input type="radio" id="p9_option_a" name="q9" value="a">
+                        <label for="p9_option_a">a) La presión social.</label><br>
+                        <input type="radio" id="p9_option_b" name="q9" value="b">
+                        <label for="p9_option_b">b) El amor hacia el joven.</label><br>
+                        <input type="radio" id="p9_option_c" name="q9" value="c">
+                        <label for="p9_option_c">c) La necesidad de atravesar el río.</label><br>
+                        <br>
+                        <!-- Pregunta 10 -->
+                        <label for="q10" class="q">¿Cuál crees que fue la actitud predominante del joven hacia la doncella después
+                            de la revelación?</label><br>
+                        <input type="radio" id="p10_option_a" name="q10" value="a">
+                        <label for="p10_option_a">a) Desconfianza.</label><br>
+                        <input type="radio" id="p10_option_b" name="q10" value="b">
+                        <label for="p10_option_b">b) Enojo.</label><br>
+                        <input type="radio" id="p10_option_c" name="q10" value="c">
+                        <label for="p10_option_c">c) Compasión.</label><br>
+                        <br>
+                        <!-- Pregunta 11 -->
+                        <label for="q11" class="q">¿Qué pensamiento crees que predominaba en la mente de la doncella antes de
+                            tomar su decisión final?</label><br>
+                        <input type="radio" id="p11_option_a" name="q11" value="a">
+                        <label for="p11_option_a">a) Lealtad hacia el viejo.</label><br>
+                        <input type="radio" id="p11_option_b" name="q11" value="b">
+                        <label for="p11_option_b">b) Preocupación por el joven.</label><br>
+                        <input type="radio" id="p11_option_c" name="q11" value="c">
+                        <label for="p11_option_c">c) Deseo de cruzar el río.</label><br>
+                        <br>
+                        <!-- Pregunta 12 -->
+                        <label for="q12" class="q">¿Qué opinas que era más importante para el joven en la relación?</label><br>
+                        <input type="radio" id="p12_option_a" name="q12" value="a">
+                        <label for="p12_option_a">a) La transparencia.</label><br>
+                        <input type="radio" id="p12_option_b" name="q12" value="b">
+                        <label for="p12_option_b">b) La seguridad emocional.</label><br>
+                        <input type="radio" id="p12_option_c" name="q12" value="c">
+                        <label for="p12_option_c">c) La capacidad de resolver problemas.</label><br>
+                        <br>
+                        <!-- Botón para mostrar las preguntas 13-16 -->
+                        <button id="next-questions-btn-9-12">Siguiente</button>
+                    </div>
+
+                    <!-- Preguntas 13-16 -->
+                    <div id="questions-13-16" style="display: none;">
+                        <!-- Pregunta 13 -->
+                        <label for="q13" class="q">¿Cuál crees que fue la mayor debilidad en la relación entre la doncella y el
+                            joven?</label><br>
+                        <input type="radio" id="p13_option_a" name="q13" value="a">
+                        <label for="p13_option_a">a) La falta de comunicación.</label><br>
+                        <input type="radio" id="p13_option_b" name="q13" value="b">
+                        <label for="p13_option_b">b) La desconfianza mutua.</label><br>
+                        <input type="radio" id="p13_option_c" name="q13" value="c">
+                        <label for="p13_option_c">c) Las circunstancias externas.</label><br>
+                        <br>
+                        <!-- Pregunta 14 -->
+                        <label for="q14" class="q">¿Qué crees que prevaleció más en la mente del joven tras la
+                            revelación?</label><br>
+                        <input type="radio" id="p14_option_a" name="q14" value="a">
+                        <label for="p14_option_a">a) El sentido de traición.</label><br>
+                        <input type="radio" id="p14_option_b" name="q14" value="b">
+                        <label for="p14_option_b">b) La sensación de peligro.</label><br>
+                        <input type="radio" id="p14_option_c" name="q14" value="c">
+                        <label for="p14_option_c">c) El deseo de comprensión.</label><br>
+                        <br>
+                        <!-- Pregunta 15 -->
+                        <label for="q15" class="q">¿Cuál de las siguientes palabras describe mejor la actitud de la doncella hacia
+                            su decisión final?</label><br>
+                        <input type="radio" id="p15_option_a" name="q15" value="a">
+                        <label for="p15_option_a">a) Remordimiento.</label><br>
+                        <input type="radio" id="p15_option_b" name="q15" value="b">
+                        <label for="p15_option_b">b) Justificación.</label><br>
+                        <input type="radio" id="p15_option_c" name="q15" value="c">
+                        <label for="p15_option_c">c) Resignación.</label><br>
+                        <br>
+                        <!-- Pregunta 16 -->
+                        <label for="q16" class="q">¿Qué crees que motivó más al joven a buscar una solución para cruzar el
+                            río?</label><br>
+                        <input type="radio" id="p16_option_a" name="q16" value="a">
+                        <label for="p16_option_a">a) La urgencia de reunirse con la doncella.</label><br>
+                        <input type="radio" id="p16_option_b" name="q16" value="b">
+                        <label for="p16_option_b">b) El deseo de demostrar su valentía.</label><br>
+                        <input type="radio" id="p16_option_c" name="q16" value="c">
+                        <label for="p16_option_c">c) La necesidad de resolver el problema del puente caído.</label><br>
+
+                        <!-- Botón para mostrar las preguntas 17-20 -->
+                        <button id="next-questions-btn-13-16">Siguiente</button>
+                    </div>
+
+                    <!-- Preguntas 17-20 -->
+                    <div id="questions-17-20" style="display: none;">
+                        <!-- Pregunta 17 -->
+                        <label for="q17" class="q">¿Cuál crees que fue la reacción emocional predominante de la doncella tras el
+                            rechazo del joven?</label><br>
+                        <input type="radio" id="p17_option_a" name="q17" value="a">
+                        <label for="p17_option_a">a) Desesperación.</label><br>
+                        <input type="radio" id="p17_option_b" name="q17" value="b">
+                        <label for="p17_option_b">b) Dolor emocional.</label><br>
+                        <input type="radio" id="p17_option_c" name="q17" value="c">
+                        <label for="p17_option_c">c) Determinación.</label><br>
+                        <br>
+                        <!-- Pregunta 18 -->
+                        <label for="q18" class="q">¿Qué piensas que predominó más en la mente del joven al tomar su decisión sobre
+                            cómo cruzar el río?</label><br>
+                        <input type="radio" id="p18_option_a" name="q18" value="a">
+                        <label for="p18_option_a">a) La seguridad.</label><br>
+                        <input type="radio" id="p18_option_b" name="q18" value="b">
+                        <label for="p18_option_b">b) La rapidez.</label><br>
+                        <input type="radio" id="p18_option_c" name="q18" value="c">
+                        <label for="p18_option_c">c) El riesgo.</label><br>
+                        <br>
+                        <!-- Pregunta 19 -->
+                        <label for="q19" class="q">¿Qué crees que fue lo más influyente en la determinación final de la
+                            doncella?</label><br>
+                        <input type="radio" id="p19_option_a" name="q19" value="a">
+                        <label for="p19_option_a">a) La presión de los familiares.</label><br>
+                        <input type="radio" id="p19_option_b" name="q19" value="b">
+                        <label for="p19_option_b">b) El anhelo de estar con su amado.</label><br>
+                        <input type="radio" id="p19_option_c" name="q19" value="c">
+                        <label for="p19_option_c">c) La situación con el viejo.</label><br>
+                        <br>
+                        <!-- Pregunta 20 -->
+                        <label for="q20" class="q">¿Cuál fue la emoción predominante en el joven al enterarse de la
+                            verdad?</label><br>
+                        <input type="radio" id="p20_option_a" name="q20" value="a">
+                        <label for="p20_option_a">a) Rabia.</label><br>
+                        <input type="radio" id="p20_option_b" name="q20" value="b">
+                        <label for="p20_option_b">b) Desilusión.</label><br>
+                        <input type="radio" id="p20_option_c" name="q20" value="c">
+                        <label for="p20_option_c">c) Confusión.</label><br>
+
+                        <!-- Botón para enviar las respuestas -->
+                        <button type="submit">Enviar respuestas</button>
+                    </div>
                 </form>
             </div>
 
-            <div class="conclusion" id="conclusion">
+            <div class="conclusion" id="conclusion" style="display: none;">
             </div>
 
             <div class="controls">

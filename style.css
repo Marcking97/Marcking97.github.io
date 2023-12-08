@@ -1,6 +1,6 @@
 body {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
 
 .content {
     padding: 50px 10px;
-    width: 50%;
+    width: 35%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgb(225, 238, 250);
@@ -35,16 +35,15 @@ h1 {
 }
 
 .container {
-    width: 80%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
     margin: 20px auto;
     background-color: rgb(188, 220, 248);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.story {
-    margin-bottom: 10px;
 }
 
 #story-text {
@@ -79,4 +78,30 @@ button:hover {
 
 .conclusion {
     color: black;
+}
+
+.q{
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 95%;
+    }
+    
+    .container{
+        height: 70%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 12px;
+    }
+    
+    button {
+        font-size: 12px;
+    }
 }
