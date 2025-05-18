@@ -35,13 +35,17 @@ function typeWriter(text, elementId, delay = 30) {
   typing();
 }
 
-let currentIndex = 0;
-const slides = document.querySelectorAll(".slide");
+const screen2 = document.getElementsById("screen2");
+if (screen2.classList.contains("active")) {
+}else{
+  let currentIndex = 0;
+  const slides = document.querySelectorAll(".slide");
 
-function showNextSlide() {
-  slides[currentIndex].classList.remove("active");
-  currentIndex = (currentIndex + 1) % slides.length;
-  slides[currentIndex].classList.add("active");
+  function showNextSlide() {
+    slides[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add("active");
+  }
 }
 
 setInterval(showNextSlide, 4000);
