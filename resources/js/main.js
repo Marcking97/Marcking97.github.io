@@ -35,9 +35,8 @@ function typeWriter(text, elementId, delay = 30) {
   typing();
 }
 
-const screen2 = document.getElementsById("screen2");
-if (screen2.classList.contains("active")) {
-}else{
+const screen1 = document.getElementsById("screen1");
+if (screen1.classList.contains("active")) {
   let currentIndex = 0;
   const slides = document.querySelectorAll(".slide");
 
